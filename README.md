@@ -1,6 +1,7 @@
 # CiteRight
 
-**Live Demo:** [Check out the live app on Vercel!](https://cite-right-mr2ion221-sadviks-projects.vercel.app) *(Note: The backend is hosted on Render's free tier, so the first upload after a period of inactivity may take ~45 seconds to wake the server up.)*
+**Live Demo:** [Check out the live app on Vercel!](https://cite-right-mr2ion221-sadviks-projects.vercel.app) 
+*(Note: The backend is hosted on Render's free tier, so the first upload after a period of inactivity may take ~45 seconds to wake the server up.)*
 
 **RAG-powered content generation with verifiable, per-claim citations.**
 
