@@ -174,6 +174,7 @@ Full interactive schema available at `/docs` when the backend is running.
 
 - [x] Deploy to Render (backend) + Vercel (frontend)
 - [x] Swap in-memory vector store for Supabase pgvector (persistence across restarts)
+- [x] Implement graceful degradation for memory-constrained cloud environments (auto-fallback to TF-IDF)
 - [ ] Streamed pipeline progress (real-time, not simulated) via SSE
 - [ ] Multi-document ingestion per session
 - [ ] Configurable verification thresholds per mode
