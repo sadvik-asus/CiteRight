@@ -1,5 +1,7 @@
 # CiteRight
 
+**Live Demo:** [Check out the live app on Vercel!](https://cite-right-mr2ion221-sadviks-projects.vercel.app) *(Note: The backend is hosted on Render's free tier, so the first upload after a period of inactivity may take ~45 seconds to wake the server up.)*
+
 **RAG-powered content generation with verifiable, per-claim citations.**
 
 CiteRight doesn't just answer questions from your documents — it writes full drafts (articles, study notes, literature reviews) where every sentence is traced back to the exact source passage it came from, and then *independently checks* whether that citation actually holds up. It's a self-checking generator, not just a "chat with your PDF" tool.
