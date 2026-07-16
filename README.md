@@ -179,5 +179,6 @@ Full interactive schema available at `/docs` when the backend is running.
 
 ## Author
 
-**Vadla Sadvik Kumar** — B.Tech CSE (AI/ML), Ellenki College of Engineering and Technology
-GitHub: [@sadvik-asus](https://github.com/sadvik-asus)
+**Vadla Sadvik Kumar**
+- GitHub: [@sadvik-asus](https://github.com/sadvik-asus)
+- LinkedIn: [sadvikkumar](https://www.linkedin.com/in/sadvikkumar/)
