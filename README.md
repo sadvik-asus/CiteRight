@@ -85,7 +85,7 @@ citeright/
 │   ├── core/
 │   │   ├── chunking.py          # document parsing + overlapping chunking
 │   │   ├── embeddings.py        # embedding backend (sentence-transformers + dev fallback)
-│   │   ├── vector_store.py      # similarity search
+│   │   ├── supabase_store.py    # persistent vector search (Supabase pgvector)
 │   │   ├── generation.py        # LLM prompt building + citation-aware generation
 │   │   ├── verification.py      # claim ↔ source semantic verification
 │   │   └── document_manager.py  # per-document indexing lifecycle
@@ -148,6 +148,7 @@ Frontend runs at `http://localhost:5173`.
 | Variable | Where | Required | Description |
 |---|---|---|---|
 | `GROQ_API_KEY` | backend `.env` | Yes | API key from [console.groq.com](https://console.groq.com) |
+| `SUPABASE_DB_URL` | backend `.env` | Yes | Supabase connection string (transaction pooler) |
 | `EMBEDDING_BACKEND` | backend `.env` | No | Force `sentence-transformers` or `tfidf`. Auto-detects if unset. |
 | `VITE_API_BASE` | frontend `.env.local` | Yes | URL of the backend API (e.g. `http://localhost:8000` in dev) |
 
@@ -168,8 +169,8 @@ Full interactive schema available at `/docs` when the backend is running.
 
 ## Roadmap
 
-- [ ] Deploy to Render (backend) + Vercel (frontend)
-- [ ] Swap in-memory vector store for Supabase pgvector (persistence across restarts)
+- [x] Deploy to Render (backend) + Vercel (frontend)
+- [x] Swap in-memory vector store for Supabase pgvector (persistence across restarts)
 - [ ] Streamed pipeline progress (real-time, not simulated) via SSE
 - [ ] Multi-document ingestion per session
 - [ ] Configurable verification thresholds per mode
