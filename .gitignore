@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Env / secrets
+.env
+
+# Uploaded files (local dev artifact storage)
+/tmp/citeright_uploads/
+
+# OS
+.DS_Store

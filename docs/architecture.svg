@@ -1,0 +1,128 @@
+<svg viewBox="0 0 1240 760" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6178"/>
+    </marker>
+    <marker id="arrowNavy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#263159"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="760" fill="#f6f3ea"/>
+
+  <!-- Lane labels -->
+  <text x="40" y="55" font-size="13" font-weight="700" letter-spacing="1.5" fill="#8b91a3">1 · INGESTION</text>
+  <text x="40" y="295" font-size="13" font-weight="700" letter-spacing="1.5" fill="#8b91a3">2 · RETRIEVAL + GENERATION</text>
+  <text x="40" y="555" font-size="13" font-weight="700" letter-spacing="1.5" fill="#8b91a3">3 · VERIFICATION</text>
+
+  <line x1="30" y1="68" x2="1210" y2="68" stroke="#ddd4bd" stroke-width="1"/>
+  <line x1="30" y1="308" x2="1210" y2="308" stroke="#ddd4bd" stroke-width="1"/>
+  <line x1="30" y1="568" x2="1210" y2="568" stroke="#ddd4bd" stroke-width="1"/>
+
+  <!-- ============ LANE 1: INGESTION ============ -->
+  <!-- Document -->
+  <rect x="40" y="95" width="170" height="70" rx="6" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="125" y="125" font-size="14" font-weight="600" fill="#1d2333" text-anchor="middle">Document</text>
+  <text x="125" y="144" font-size="11" fill="#5a6178" text-anchor="middle">.pdf / .txt / .md</text>
+
+  <path d="M210,130 L260,130" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Chunking -->
+  <rect x="262" y="95" width="170" height="70" rx="6" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="347" y="120" font-size="14" font-weight="600" fill="#1d2333" text-anchor="middle">Chunking</text>
+  <text x="347" y="139" font-size="11" fill="#5a6178" text-anchor="middle">overlapping, page-aware</text>
+  <text x="347" y="153" font-size="11" fill="#5a6178" text-anchor="middle">mode-tuned chunk size</text>
+
+  <path d="M432,130 L482,130" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Embedding -->
+  <rect x="484" y="95" width="170" height="70" rx="6" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="569" y="120" font-size="14" font-weight="600" fill="#1d2333" text-anchor="middle">Embedding</text>
+  <text x="569" y="139" font-size="11" fill="#5a6178" text-anchor="middle">sentence-transformers</text>
+  <text x="569" y="153" font-size="11" fill="#5a6178" text-anchor="middle">MiniLM-L6-v2, 384-dim</text>
+
+  <path d="M654,130 L704,130" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Vector Store -->
+  <rect x="706" y="95" width="200" height="70" rx="6" fill="#eef0f8" stroke="#263159" stroke-width="1.5"/>
+  <text x="806" y="120" font-size="14" font-weight="600" fill="#263159" text-anchor="middle">Vector Store</text>
+  <text x="806" y="139" font-size="11" fill="#3d4566" text-anchor="middle">Supabase · pgvector</text>
+  <text x="806" y="153" font-size="11" fill="#3d4566" text-anchor="middle">cosine similarity index</text>
+
+  <!-- ============ LANE 2: RETRIEVAL + GENERATION ============ -->
+  <!-- Vector store connects down -->
+  <path d="M806,166 L806,340" stroke="#263159" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowNavy)"/>
+
+  <!-- User Query -->
+  <rect x="40" y="335" width="170" height="70" rx="6" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="125" y="365" font-size="14" font-weight="600" fill="#1d2333" text-anchor="middle">User Request</text>
+  <text x="125" y="384" font-size="11" fill="#5a6178" text-anchor="middle">"explain X, summarize Y…"</text>
+
+  <path d="M210,370 L260,370" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Embed Query -->
+  <rect x="262" y="335" width="170" height="70" rx="6" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="347" y="365" font-size="14" font-weight="600" fill="#1d2333" text-anchor="middle">Embed Query</text>
+  <text x="347" y="384" font-size="11" fill="#5a6178" text-anchor="middle">same embedding model</text>
+
+  <path d="M432,370 L482,370" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Retrieval -->
+  <rect x="484" y="335" width="170" height="70" rx="6" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="569" y="360" font-size="14" font-weight="600" fill="#1d2333" text-anchor="middle">Retrieval</text>
+  <text x="569" y="379" font-size="11" fill="#5a6178" text-anchor="middle">top-k nearest chunks</text>
+  <text x="569" y="393" font-size="11" fill="#5a6178" text-anchor="middle">(k = 6–8, per mode)</text>
+
+  <path d="M654,370 L704,370" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Prompt builder + mode config -->
+  <rect x="706" y="335" width="200" height="70" rx="6" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="806" y="358" font-size="14" font-weight="600" fill="#1d2333" text-anchor="middle">Prompt Builder</text>
+  <text x="806" y="377" font-size="11" fill="#5a6178" text-anchor="middle">+ mode config</text>
+  <text x="806" y="391" font-size="11" fill="#5a6178" text-anchor="middle">(General / Study / Research)</text>
+
+  <path d="M906,370 L956,370" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- LLM Generation -->
+  <rect x="958" y="335" width="230" height="70" rx="6" fill="#eef0f8" stroke="#263159" stroke-width="1.5"/>
+  <text x="1073" y="358" font-size="14" font-weight="600" fill="#263159" text-anchor="middle">LLM Generation</text>
+  <text x="1073" y="377" font-size="11" fill="#3d4566" text-anchor="middle">Groq · Llama 3.3 70B</text>
+  <text x="1073" y="391" font-size="11" fill="#3d4566" text-anchor="middle">cites [n] per sentence</text>
+
+  <!-- down to lane 3 -->
+  <path d="M1073,406 L1073,600 L 906,600" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ============ LANE 3: VERIFICATION ============ -->
+
+  <!-- Claim Parser -->
+  <rect x="706" y="565" width="200" height="70" rx="6" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="806" y="590" font-size="14" font-weight="600" fill="#1d2333" text-anchor="middle">Claim Parser</text>
+  <text x="806" y="609" font-size="11" fill="#5a6178" text-anchor="middle">splits draft on [n]</text>
+  <text x="806" y="623" font-size="11" fill="#5a6178" text-anchor="middle">maps claim → source chunk</text>
+
+  <path d="M704,600 L654,600" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Verification -->
+  <rect x="424" y="565" width="230" height="70" rx="6" fill="#e7f0e9" stroke="#2e6f4c" stroke-width="1.5"/>
+  <text x="539" y="588" font-size="14" font-weight="600" fill="#2e6f4c" text-anchor="middle">Verification</text>
+  <text x="539" y="607" font-size="11" fill="#2e6f4c" text-anchor="middle">claim ↔ source similarity</text>
+  <text x="539" y="621" font-size="11" fill="#2e6f4c" text-anchor="middle">supported / weak / unsupported</text>
+
+  <path d="M424,600 L374,600" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Trust Score -->
+  <rect x="150" y="565" width="224" height="70" rx="6" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="262" y="588" font-size="14" font-weight="600" fill="#1d2333" text-anchor="middle">Trust Score + Annotated Draft</text>
+  <text x="262" y="607" font-size="11" fill="#5a6178" text-anchor="middle">color-coded citation stamps</text>
+  <text x="262" y="621" font-size="11" fill="#5a6178" text-anchor="middle">click-through to exact source</text>
+
+  <path d="M150,600 L100,600" stroke="#5a6178" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="30" y="565" width="70" height="70" rx="35" fill="#263159"/>
+  <text x="65" y="595" font-size="12" fill="#f6f3ea" text-anchor="middle" font-weight="600">UI</text>
+  <text x="65" y="612" font-size="10" fill="#c3c8dd" text-anchor="middle">React</text>
+
+  <!-- Legend -->
+  <text x="40" y="700" font-size="11" fill="#8b91a3">Solid arrows: data flow within a stage</text>
+  <text x="40" y="718" font-size="11" fill="#8b91a3">Dashed arrow: retrieval reads from the persisted vector index built during ingestion</text>
+</svg>

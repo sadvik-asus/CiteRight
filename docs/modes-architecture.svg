@@ -1,0 +1,54 @@
+<svg viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <rect width="1000" height="420" fill="#f6f3ea"/>
+
+  <text x="500" y="45" font-size="17" font-weight="700" fill="#1d2333" text-anchor="middle">One Engine, Three Modes</text>
+  <text x="500" y="68" font-size="12" fill="#5a6178" text-anchor="middle">Mode only swaps the prompt template, chunk size, and output shape — retrieval and verification logic stay identical</text>
+
+  <!-- Core engine -->
+  <rect x="360" y="100" width="280" height="90" rx="8" fill="#eef0f8" stroke="#263159" stroke-width="2"/>
+  <text x="500" y="135" font-size="15" font-weight="700" fill="#263159" text-anchor="middle">Core RAG Engine</text>
+  <text x="500" y="155" font-size="11" fill="#3d4566" text-anchor="middle">retrieval · generation · verification</text>
+  <text x="500" y="171" font-size="11" fill="#3d4566" text-anchor="middle">shared by every mode, unchanged</text>
+
+  <!-- connector down -->
+  <path d="M500,190 L500,225" stroke="#263159" stroke-width="2"/>
+  <path d="M500,225 L220,225" stroke="#263159" stroke-width="2"/>
+  <path d="M500,225 L500,225" stroke="#263159" stroke-width="2"/>
+  <path d="M500,225 L780,225" stroke="#263159" stroke-width="2"/>
+  <path d="M220,225 L220,255" stroke="#263159" stroke-width="2" marker-end="url(#a1)"/>
+  <path d="M500,225 L500,255" stroke="#263159" stroke-width="2" marker-end="url(#a1)"/>
+  <path d="M780,225 L780,255" stroke="#263159" stroke-width="2" marker-end="url(#a1)"/>
+
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#263159"/>
+    </marker>
+  </defs>
+
+  <!-- Mode 1 -->
+  <rect x="80" y="260" width="280" height="130" rx="8" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="220" y="290" font-size="14" font-weight="700" fill="#1d2333" text-anchor="middle">General CiteRight</text>
+  <line x1="105" y1="302" x2="335" y2="302" stroke="#ddd4bd"/>
+  <text x="220" y="322" font-size="11" fill="#5a6178" text-anchor="middle">chunk size: 220 words</text>
+  <text x="220" y="340" font-size="11" fill="#5a6178" text-anchor="middle">prompt: clear technical article</text>
+  <text x="220" y="358" font-size="11" fill="#5a6178" text-anchor="middle">output: flowing paragraphs</text>
+  <text x="220" y="376" font-size="11" fill="#5a6178" text-anchor="middle">any document → cited report</text>
+
+  <!-- Mode 2 -->
+  <rect x="360" y="260" width="280" height="130" rx="8" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="500" y="290" font-size="14" font-weight="700" fill="#1d2333" text-anchor="middle">Study Notes Generator</text>
+  <line x1="385" y1="302" x2="615" y2="302" stroke="#ddd4bd"/>
+  <text x="500" y="322" font-size="11" fill="#5a6178" text-anchor="middle">chunk size: 150 words (finer)</text>
+  <text x="500" y="340" font-size="11" fill="#5a6178" text-anchor="middle">prompt: concise, exam-ready</text>
+  <text x="500" y="358" font-size="11" fill="#5a6178" text-anchor="middle">output: short bullet points</text>
+  <text x="500" y="376" font-size="11" fill="#5a6178" text-anchor="middle">lecture/textbook → notes</text>
+
+  <!-- Mode 3 -->
+  <rect x="640" y="260" width="280" height="130" rx="8" fill="#fbf9f3" stroke="#ddd4bd" stroke-width="1.5"/>
+  <text x="780" y="290" font-size="14" font-weight="700" fill="#1d2333" text-anchor="middle">Research Summarizer</text>
+  <line x1="665" y1="302" x2="895" y2="302" stroke="#ddd4bd"/>
+  <text x="780" y="322" font-size="11" fill="#5a6178" text-anchor="middle">chunk size: 260 words (wider)</text>
+  <text x="780" y="340" font-size="11" fill="#5a6178" text-anchor="middle">prompt: academic, thematic</text>
+  <text x="780" y="358" font-size="11" fill="#5a6178" text-anchor="middle">output: literature-review style</text>
+  <text x="780" y="376" font-size="11" fill="#5a6178" text-anchor="middle">papers → cited summary</text>
+</svg>
