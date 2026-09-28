@@ -186,3 +186,9 @@ Full interactive schema available at `/docs` when the backend is running.
 **Vadla Sadvik Kumar**
 - GitHub: [@sadvik-asus](https://github.com/sadvik-asus)
 - LinkedIn: [sadvikkumar](https://www.linkedin.com/in/sadvikkumar/)
+
+## Project Structure
+- **frontend/**: React UI
+- **backend/**: FastAPI server
+- **models/**: ML models and data schemas
+- **infrastructure/**: Supabase and deployment configs
