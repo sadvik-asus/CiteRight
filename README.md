@@ -183,7 +183,7 @@ Full interactive schema available at `/docs` when the backend is running.
 
 ## Author
 
-**Vadla Sadvik Kumar**
+**V. Sadvik Kumar**
 - GitHub: [@sadvik-asus](https://github.com/sadvik-asus)
 - LinkedIn: [sadvikkumar](https://www.linkedin.com/in/sadvikkumar/)
 
